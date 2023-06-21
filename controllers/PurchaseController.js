@@ -26,12 +26,10 @@ const formController = async (req, res) => {
     if (validator.validate(email)) {
 
         (async () => {
-            const browser = await puppeteer.launch({ headless: false });
+            const browser = await puppeteer.launch({ headless: 'new' });
             const page = await browser.newPage();
             // Navigate to the webpage containing the form
-            console.log("before url")
             await page.goto('https://api.clixlo.com/widget/form/wMbKwQ0BfkLFQQcClrvG', { waitUntil: 'domcontentloaded' });
-            console.log("after url");
             // Fill in the form fields as Needed
             await page.type('input[name="full_name"]', String(full_name));
             await page.type('input[name="phone"]', String(phone));

@@ -28,7 +28,7 @@ const refinanceController = async (req, res) => {
     if (validator.validate(email)) {
 
         (async () => {
-            const browser = await puppeteer.launch({ headless: false });
+            const browser = await puppeteer.launch({ headless: 'new' });
             const page = await browser.newPage();
             // Navigate to the webpage containing the form
             await page.goto('https://api.clixlo.com/widget/form/d8K0IpsJGdtuVyErO1TR', { waitUntil: 'domcontentloaded' });
