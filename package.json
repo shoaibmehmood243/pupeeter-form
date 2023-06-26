@@ -17,6 +17,7 @@
     "fs": "^0.0.1-security",
     "got": "^13.0.0",
     "nodemon": "^2.0.22",
+    "playwright": "^1.35.1",
     "puppeteer": "^20.7.2",
     "request": "^2.88.2"
   }
